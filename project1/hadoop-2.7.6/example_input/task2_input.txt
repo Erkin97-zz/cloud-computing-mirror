@@ -1,0 +1,11 @@
+"Apple, Pear, Pineapple, apple, Orange"
+"Banana, orange, orange, apple, apple"
+"pineapple, Strawberry, Melon, melon, apple"
+'apple, apple, apple, apple, apple"
+'apple, pear'
+"Orange.Pear.Pineapple.apple.Orange"
+"Banana, orange, orange, strawberry, apple"
+"pineapple. Strawberry. Melon. melon. apple."
+'orange, orange, Orange, orange, Orange'
+'apple, pear, Orange, Strawberry'
+
