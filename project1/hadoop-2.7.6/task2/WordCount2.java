@@ -21,9 +21,10 @@ public class WordCount2 {
 
     public void map(Object key, Text value, Context context
                     ) throws IOException, InterruptedException {
-      StringTokenizer itr = new StringTokenizer(value.toString());
+      StringTokenizer itr = new StringTokenizer(value.toString()," , . \" \'"); // comma dot duble qot uno qot
       while (itr.hasMoreTokens()) {
-        word.set(itr.nextToken());
+        String nToken = itr.nextToken();
+        word.set(nToken.toLowerCase());
         context.write(word, one);
       }
     }
@@ -40,8 +41,10 @@ public class WordCount2 {
       for (IntWritable val : values) {
         sum += val.get();
       }
-      result.set(sum);
-      context.write(key, result);
+      if (sum > 10) {
+        result.set(sum);
+        context.write(key, result); 
+      }
     }
   }
 
